@@ -11,6 +11,7 @@ class ProjectBase(TestCase):
         self.UIType = Type(self.driver)
         self.verification = Verify()
         self.assertion = Assert()
+        self.isMobile = self.app.isMobile()
 
     def tearDown(self):
         self.driver.quit()
