@@ -12,6 +12,9 @@ class ProjectBase(TestCase):
         self.verification = Verify()
         self.assertion = Assert()
         self.isMobile = self.app.isMobile()
+        self.isChromium = False
+        if self.driver.current_context == 'CHROMIUM':
+            self.isChromium = True
 
     def tearDown(self):
         self.driver.quit()
