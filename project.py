@@ -9,5 +9,6 @@ def main():
     app = Device(driver)
     UIType = Type(driver)
     print "hi"
+    print "bonjour"
 
 main()
