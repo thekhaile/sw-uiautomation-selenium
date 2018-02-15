@@ -10,5 +10,6 @@ def main():
     UIType = Type(driver)
     print "hi"
     print "bonjour"
+    print "hola"
 
 main()
