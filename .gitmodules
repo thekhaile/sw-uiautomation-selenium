@@ -1,6 +1,3 @@
 [submodule "southwire-shared"]
 	path = southwire-shared
 	url = https://stash.r.mutualmobile.com/scm/aut/southwire-shared.git
-[submodule "common"]
-	path = common
-	url = https://stash.r.mutualmobile.com/scm/aut/common.git
