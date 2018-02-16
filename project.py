@@ -8,8 +8,5 @@ def main():
     global UIType
     app = Device(driver)
     UIType = Type(driver)
-    print "hi"
-    print "bonjour"
-    print "hola"
 
 main()
