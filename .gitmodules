@@ -3,4 +3,4 @@
 url=https://stash.r.mutualmobile.com/scm/aut/uiautomation_pkg_common_webdriver.git
 [submodule "southwire_pkg_uiautomation_webdriver"]
 	path = southwire_pkg_uiautomation_webdriver
-	url = https://khai.le@stash.r.mutualmobile.com/scm/aut/southwire_pkg_uiautomation_webdriver.git
+url=https://stash.r.mutualmobile.com/scm/aut/southwire_pkg_uiautomation_webdriver.git
