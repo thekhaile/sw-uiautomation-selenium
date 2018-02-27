@@ -8,5 +8,6 @@ def main():
     global UIType
     app = Device(driver)
     UIType = Type(driver)
+    app.driver.get('https://southwire-configurator-test.firebaseapp.com/login')
 
 main()
