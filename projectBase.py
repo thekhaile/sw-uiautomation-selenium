@@ -5,7 +5,7 @@ from uiautomation_pkg_common_webdriver import *
 
 class ProjectBase(TestCase):
     def setUp(self):
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Edge()
         self.driver.implicitly_wait(5)
         self.app = Device(self.driver)
         self.UIType = Type(self.driver)
