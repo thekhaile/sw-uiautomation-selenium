@@ -13,6 +13,8 @@ class ProjectBase(TestCase):
         self.assertion = Assert()
         self.isMobile = self.app.isMobile()
         self.isChromium = False
+        self.isSafari = self.app.isSafari()
+        self.driver.maximize_window()
 
     def tearDown(self):
         self.driver.quit()
