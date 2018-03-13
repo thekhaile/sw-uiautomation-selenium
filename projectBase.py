@@ -12,7 +12,7 @@ class ProjectBase(TestCase):
         # desired_caps['se:ieOptions']['ie.ensureCleanSession'] = True
         # desired_caps['se:ieOptions']['ignoreZoomSetting'] = True
         # desired_caps['se:ieOptions']['enablePersistentHover'] = True
-        # desired_caps['se:ieOptions']['nativeEvents'] = False
+        # desired_caps['se:ieOptions']['nativeEvents'] = True
         # desired_caps['se:ieOptions']['requireWindowFocus'] = True
         # self.driver = webdriver.Ie(capabilities=desired_caps)
         self.driver = webdriver.Chrome()
