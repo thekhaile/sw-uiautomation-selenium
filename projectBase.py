@@ -2,6 +2,8 @@ from selenium import webdriver
 from unittest import TestCase
 from uiautomation_pkg_common_webdriver import *
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+import os
+import sys
 
 
 class ProjectBase(TestCase):
@@ -15,8 +17,10 @@ class ProjectBase(TestCase):
         # desired_caps['se:ieOptions']['nativeEvents'] = True
         # desired_caps['se:ieOptions']['requireWindowFocus'] = True
         # self.driver = webdriver.Ie(capabilities=desired_caps)
+
+
         self.driver = webdriver.Chrome()
-        self.driver.implicitly_wait(5)
+        self.driver.implicitly_wait(15)
         self.app = Device(self.driver)
         self.UIType = Type(self.driver)
         self.verification = Verify()
@@ -26,9 +30,11 @@ class ProjectBase(TestCase):
         self.isSafari = self.app.isSafari()
         self.driver.maximize_window()
 
-
-
+        self.screenshotPath = '../../screenshots/'
+        self.app.createScreenshotDir(self.screenshotPath)
 
     def tearDown(self):
+        if self.assertion.didThrowError():
+            self.app.saveScreenshot(self.id(), path=self.screenshotPath)
         self.driver.close()
         self.driver.quit()
