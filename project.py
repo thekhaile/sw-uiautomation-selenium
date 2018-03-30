@@ -3,13 +3,6 @@ from uiautomation_pkg_common_webdriver import *
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from southwire_pkg_uiautomation_webdriver.components import *
 
-def main():
-    global flow
-    flow = Flow()
-    flow.launch()
-
-main()
-
 class Flow():
     def launch(self):
         # #The following code is needed to run IE in order to clear cache
@@ -47,4 +40,10 @@ class Flow():
     def quit(self):
         self.driver.close()
 
+def main():
+    global flow
+    flow = Flow()
+    flow.launch()
+
+main()
 
