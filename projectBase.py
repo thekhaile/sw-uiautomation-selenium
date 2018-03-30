@@ -40,4 +40,3 @@ class ProjectBase(TestCase):
             except:
                 pass
         self.driver.close()
-        self.driver.quit()
