@@ -8,6 +8,12 @@ import sys
 
 class ProjectBase(TestCase):
     def setUp(self):
+        user = 'mmqaautomation@gmail.com'
+        key = '/SGHPosrUb.eHKU2QIZE-7nA1yd8O2c9sGIGRvKqo'
+        version = 'placeholderVersion'
+        runId = 'placeholderRunId'
+        self.caseId = ''
+        self.client = APIClient(runId=runId, version=version, user=user, key=key)
         # #The following code is needed to run IE in order to clear cache
         # desired_caps = DesiredCapabilities.INTERNETEXPLORER
         # desired_caps['se:ieOptions'] = {}
@@ -35,8 +41,18 @@ class ProjectBase(TestCase):
 
     def tearDown(self):
         if self.assertion.didThrowError():
+            resultFlag = False
             try:
                 self.app.saveScreenshot(self.id(), path=self.screenshotPath)
             except:
                 pass
-        self.driver.close()
+        else:
+            resultFlag = True
+        try:
+            self.client.updateTestrail(self.caseId, resultFlag)
+        except:
+            pass
+        finally:
+            self.driver.close()
+            if not self.app.isFirefox():
+                self.driver.quit()
