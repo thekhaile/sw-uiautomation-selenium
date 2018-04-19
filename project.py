@@ -28,13 +28,19 @@ class Flow():
         self.driver.maximize_window()
 
         # Initializing the objects specific to the project
-        self.authentication = Authentication(self)
-        self.circuits = Circuits(self)
         self.feederSchedule = FeederSchedule(self)
-        self.jobs = Jobs(self)
+        self.reelList = ReelList(self)
+        self.jobSummary = JobSummary(self)
+        self.authentication = Authentication(self)
+        self.circuit = Circuit(self)
+        self.footer = Footer(self)
+        self.job = Job(self)
+        self.jobList = JobList(self)
         self.navigation = Navigation(self)
-        self.projects = Projects(self)
-        self.reels = Reels(self)
+        self.passwordReset = PasswordReset(self)
+        self.project = Project(self)
+        self.projectList = ProjectList(self)
+        self.reel = Reel(self)
         self.registration = Registration(self)
 
     def quit(self):
