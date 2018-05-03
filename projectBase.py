@@ -53,7 +53,7 @@ class ProjectBase(TestCase):
         except:
             pass
         finally:
-            if self.isInternetExplorer():
+            if self.isInternetExplorer:
                 """Make sure that all IE instances are closed since each run opens 2 IE instances"""
                 os.system('TASKKILL /F /IM iexplore.exe /T')
 
@@ -65,5 +65,5 @@ class ProjectBase(TestCase):
                     pass
             else:
                 self.driver.close()
-            if not (self.isFirefox() or self.isSafari()):
+            if not (self.isFirefox or self.isSafari):
                 self.driver.quit()
