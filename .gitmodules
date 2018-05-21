@@ -1,6 +1,6 @@
 [submodule "python-webdriver-helper"]
 	path = python-webdriver-helper
-url=https://github.com/thekhaile/python-webdriver-helper.git
+	url = https://github.com/thekhaile/python-webdriver-helper.git
 [submodule "sw-pkg-uiautomation-webdriver"]
 	path = sw-pkg-uiautomation-webdriver
-url=https://github.com/thekhaile/sw-pkg-uiautomation-webdriver.git
+	url = https://github.com/thekhaile/sw-pkg-uiautomation-webdriver.git
