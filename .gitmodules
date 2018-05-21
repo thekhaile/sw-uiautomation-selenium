@@ -1,6 +1,6 @@
-[submodule "uiautomation_pkg_common_webdriver"]
-	path = uiautomation_pkg_common_webdriver
-url=https://stash.r.mutualmobile.com/scm/aut/uiautomation_pkg_common_webdriver.git
-[submodule "southwire_pkg_uiautomation_webdriver"]
-	path = southwire_pkg_uiautomation_webdriver
-url=https://stash.r.mutualmobile.com/scm/aut/southwire_pkg_uiautomation_webdriver.git
+[submodule "python-webdriver-helper"]
+	path = python-webdriver-helper
+url=https://github.com/thekhaile/python-webdriver-helper.git
+[submodule "sw-pkg-uiautomation-webdriver"]
+	path = sw-pkg-uiautomation-webdriver
+url=https://github.com/thekhaile/sw-pkg-uiautomation-webdriver.git
